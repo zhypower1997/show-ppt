@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101010">
+  <title>把一个想法，跑成一个产品｜Aprim Menu Copilot 0→1</title>
+  <meta name="description" content="Aprim Menu Copilot 从 0 到 1，以及三人团队如何 AI-native 协作。">
+  <link rel="stylesheet" href="deck.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <main class="stage" aria-label="Aprim Menu Copilot 0 到 1 演示文稿">
+    <div class="deck-shell" id="deckShell">
+      <article class="deck" id="deck">
+
+        <section class="slide slide-cover is-active" id="slide-1" data-title="把一个想法，跑成一个产品" aria-hidden="false">
+          <div class="cover-copy">
+            <img class="brand-logo" src="assets/logo.png" alt="Aprim AI">
+            <p class="cover-eyebrow">MENU COPILOT · 0→1</p>
+            <h1>把一个想法，<br><em>跑成一个产品</em></h1>
+            <p class="cover-sub">Menu Copilot 从 0→1<br>以及三人团队如何 AI-native 协作</p>
+            <p class="cover-meta">OPC 内部分享 · 2026.08</p>
+          </div>
+          <figure class="cover-visual cover-concept" aria-label="一个模糊想法经过人与 AI 的协作、验证和取舍，逐渐收束成真实产品">
+            <div class="concept-slice concept-chaos"><img src="assets/cover-concept-v2.png" alt="未经整理的想法线索"></div>
+            <div class="concept-slice concept-process"><img src="assets/cover-concept-v2.png" alt="协作、验证和取舍的过程节点"></div>
+            <div class="concept-slice concept-product"><img src="assets/cover-concept-v2.png" alt="最终收束成清晰产品实体"></div>
+            <figcaption><span>模糊假设</span><i>→</i><span>协作与证据</span><i>→</i><strong>真实产品</strong></figcaption>
+          </figure>
+          <div class="cover-foot">OPC · AI-native 产品实践</div>
+          <div class="folio">01</div>
+          <aside class="speaker-note">
+            开场先给结论：这不是一个“AI 帮我们写代码”的故事，而是一个小团队如何借助 AI，把模糊机会压成可验证产品的故事。
+            <strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；产品文档/01-产品概览/Menu-Copilot-产品总览.md；封面理念视觉由 OpenAI 图像生成。
+          </aside>
+        </section>
+
+        <section class="slide slide-statement ink" id="slide-2" data-title="0→1 真正难的，不是把页面做出来" aria-hidden="true">
+          <div class="kicker light">先讲一个反直觉的结论</div>
+          <div class="statement-wrap">
+            <p class="statement-index">01 / REALITY</p>
+            <h2>0→1 真正难的，<br><span class="strike-word">不是</span>把页面做出来</h2>
+            <p class="statement-answer">而是把方向、数据、体验、工程和商业边界，<br>持续压到同一个<span>可验证闭环</span>里。</p>
+          </div>
+          <div class="chapter-mark" aria-hidden="true">验证</div>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">02</div>
+          <aside class="speaker-note">页面、原型甚至代码都可以很快生成，但“谁愿意用、为什么用、如何安全生效、如何证明价值”仍然要一层层回答。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；文档维护/团队协作与运营规范.md。</aside>
+        </section>
+
+        <section class="slide slide-constraints coral" id="slide-3" data-title="约束比资源更清楚" aria-hidden="true">
+          <div class="kicker light">起点 · 约束比资源更清楚</div>
+          <div class="constraint-hero">
+            <div class="giant-three">3<span>人左右</span></div>
+            <p>不是卖惨。<br>它决定了我们必须选小场景、复用基础设施、尽快验证。</p>
+          </div>
+          <ol class="constraint-list">
+            <li><b>01</b><strong>巴西餐饮 SMB</strong><span>价值必须快速、直观</span></li>
+            <li><b>02</b><strong>平台能力受限</strong><span>读写权限与实时性都要验证</span></li>
+            <li><b>03</b><strong>经营数据不完整</strong><span>不能拿模型分冒充增长</span></li>
+            <li><b>04</b><strong>必须跑到真实结果</strong><span>采纳、发布、复用才算价值</span></li>
+          </ol>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">03</div>
+          <aside class="speaker-note">“三人”决定了我们必须选小场景、复用基础设施、尽快验证。平台数据不是天然可得，经营增量也不能凭空承诺。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；产品文档/01-产品概览/巴西市场与增长基础.md。</aside>
+        </section>
+
+        <section class="slide slide-choice paper" id="slide-4" data-title="为什么先做菜单" aria-hidden="true">
+          <div class="kicker">选品 · 小场景、强痛点、可闭环</div>
+          <div class="choice-photo"><img src="assets/pain-1.webp" alt="餐厅为菜品拍摄真实素材的场景"></div>
+          <div class="choice-copy">
+            <p class="cross-question">我们没有先问<br><del>“AI 能做什么？”</del></p>
+            <h2>而是先问：商家能否在几分钟内——</h2>
+            <ul class="verb-list">
+              <li><span>看见</span>问题</li>
+              <li><span>理解</span>建议</li>
+              <li><span>完成</span>一个安全动作</li>
+            </ul>
+          </div>
+          <div class="choice-reason"><span>所以，第一款产品选择了</span><strong>菜单</strong><i>真实 · 高频 · 可见 · 可行动</i></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">04</div>
+          <aside class="speaker-note">产品组合里同时看过菜单、评论、私域营销等方向。菜单先跑，是因为输入和结果更具体。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；wiki/组织与战略/OPC产品选择与验证方法.md。</aside>
+        </section>
+
+        <section class="slide slide-evidence soft" id="slide-5" data-title="69 家门店把感觉变成事实" aria-hidden="true">
+          <div class="kicker">证据 · 69 家门店 / 2,564 道菜</div>
+          <h2>样本把“感觉有问题”，<br>变成了可以讨论的事实。</h2>
+          <div class="evidence-rule" aria-hidden="true"></div>
+          <div class="metrics">
+            <div class="metric"><strong>44.3<sup>%</sup></strong><p>缺图或默认图</p><span>1,135 道菜</span></div>
+            <div class="metric"><strong>27.6<sup>%</sup></strong><p>缺少描述</p><span>708 道菜</span></div>
+            <div class="metric"><strong>7.4<sup>%</sup></strong><p>同店重复名称</p><span>190 道菜</span></div>
+          </div>
+          <p class="method-note"><strong>样本口径</strong><span>另有 14.2% 的分类仅含 1 道菜。样本后 50 店按“至少一张真实图片”筛选，不能外推为巴西市场总体比例。</span></p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">05</div>
+          <aside class="speaker-note">只讲三个数字：44.3%、27.6%、7.4%。重点不是市场规模，而是问题存在且用户一眼能懂。<strong>[Sources]</strong> 产品文档/01-产品概览/AI菜单诊断-BRD.md；wiki/产品/Anota菜单样本与诊断规则.md。</aside>
+        </section>
+
+        <section class="slide slide-timeline ink" id="slide-6" data-title="24 天，不断把证据写进边界" aria-hidden="true">
+          <div class="kicker light">时间线 · 2026.07.20—08.12</div>
+          <h2>24 天里，我们经历的不是一次开发，<br><em>而是连续收敛。</em></h2>
+          <ol class="timeline">
+            <li><time>07.20</time><b>选方向</b><span>首个 Demo</span></li>
+            <li><time>07.22</time><b>定边界</b><span>规则 + Agent<br>ChangeSet</span></li>
+            <li><time>07.27</time><b>工程化</b><span>Next.js<br>Mock / Live</span></li>
+            <li><time>07.29</time><b>可传播</b><span>Showcase<br>首次发布</span></li>
+            <li><time>07.31</time><b>改交付</b><span>自助 →<br>BD 共创</span></li>
+            <li><time>08.05</time><b>找入口</b><span>上传—优化—下载</span></li>
+            <li><time>08.12</time><b>跑双轨</b><span>生图 MVP<br>+ 菜单诊断</span></li>
+          </ol>
+          <p class="timeline-takeaway">每次变化，都把一个新证据写进了产品边界。</p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">06</div>
+          <aside class="speaker-note">按七个节点快速讲。重点是节奏：方向—架构—工程—获客—交付模式—图片能力—双轨。<strong>[Sources]</strong> 产品文档/05-发布记录/Menu-Copilot-发布记录.md；产品文档/05-发布记录/产品决策日志.md。</aside>
+        </section>
+
+        <section class="slide slide-narrow paper" id="slide-7" data-title="产品被一次次收敛出来" aria-hidden="true">
+          <div class="kicker">收敛 · 范围更清楚，承诺更谨慎</div>
+          <h2>产品不是被规划出来的，<br>而是被一次次<em>收敛</em>出来的。</h2>
+          <div class="narrow-track">
+            <div><b>01</b><strong>一张图</strong><span>AI 菜品图片优化</span></div>
+            <div><b>02</b><strong>一份菜单</strong><span>图片 + 菜名 + 描述</span></div>
+            <div><b>03</b><strong>一个闭环</strong><span>诊断 → 采用 → 发布</span></div>
+            <div><b>04</b><strong>一次共创</strong><span>BD 与商家共同选择</span></div>
+            <div><b>05</b><strong>两条轨道</strong><span>生图 MVP + 菜单诊断</span></div>
+          </div>
+          <div class="invariant"><small>始终没变的四件事</small><p>真实菜单输入 <i>·</i> 可解释诊断 <i>·</i> 商家明确确认 <i>·</i> 可审计和可回滚</p></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">07</div>
+          <aside class="speaker-note">多次页面口径变化不是摇摆，而是逐层收敛。强调不变项：真实输入、解释、确认、可回滚。<strong>[Sources]</strong> 产品文档/01-产品概览/Menu-Copilot-产品总览.md；产品文档/05-发布记录/产品决策日志.md。</aside>
+        </section>
+
+        <section class="slide slide-user ink" id="slide-8" data-title="商家不是来使用 AI 的" aria-hidden="true">
+          <div class="kicker light">产品定义</div>
+          <p class="user-lead">商家真正要做的，<br><span>不是“使用 AI”</span></p>
+          <ol class="user-questions">
+            <li><b>01</b>我的菜单，<em>最值得先改什么？</em></li>
+            <li><b>02</b>这个建议，<em>符合真实菜品吗？</em></li>
+            <li><b>03</b>改错了，<em>能不能撤回？</em></li>
+          </ol>
+          <img class="food-cutout" src="assets/sign-stick.webp" alt="餐盘里的巴西餐食">
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">08</div>
+          <aside class="speaker-note">商家不是来调 Prompt，也不是来研究模型。他只需要回答三个判断。后面的产品闭环、架构和 AI 协作都围绕这三个问题服务。<strong>[Sources]</strong> 产品文档/01-产品概览/AI菜单诊断-BRD.md；产品文档/01-产品概览/Menu-Copilot-产品总览.md。</aside>
+        </section>
+
+        <section class="slide slide-loop counter" id="slide-9" data-title="把体验压成一条产品闭环" aria-hidden="true">
+          <div class="kicker">产品闭环 · 从输入到结果</div>
+          <h2>把复杂体验，压成一条用户能复述的路。</h2>
+          <div class="loop-rail loop-top">
+            <div><b>1</b><strong>接入</strong><span>真实菜单 / 素材</span></div>
+            <i>→</i><div><b>2</b><strong>诊断</strong><span>规则先返，AI 补充</span></div>
+            <i>→</i><div><b>3</b><strong>排序</strong><span>只讲最值得做的事</span></div>
+            <i>→</i><div><b>4</b><strong>生成</strong><span>名称 / 描述 / 图片</span></div>
+          </div>
+          <div class="loop-turn" aria-hidden="true">↓</div>
+          <div class="loop-rail loop-bottom">
+            <div><b>5</b><strong>确认</strong><span>原值 / 建议 / 证据</span></div>
+            <i>→</i><div><b>6</b><strong>生效</strong><span>发布 / 核对 / 重试</span></div>
+            <i>→</i><div><b>7</b><strong>观察</strong><span>保留 / 复用 / 回滚</span></div>
+          </div>
+          <p class="loop-thesis">“生成完成” <strong>永远不等于</strong> “商家已采纳”</p>
+          <div class="phone-stack" aria-label="Aprim 产品页面示意"><img src="assets/feature-diagnosis.webp" alt="菜单诊断结果页面"><img src="assets/feature-opportunities.webp" alt="菜单优化机会页面"></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">09</div>
+          <aside class="speaker-note">最重要的分界是第 5 步：商家确认。AI 可以生成候选，但不能替经营者作事实和风险判断。<strong>[Sources]</strong> 产品文档/01-产品概览/Menu-Copilot-产品总览.md；产品文档/02-功能规范/Menu-Copilot-诊断与建议采用.md。</aside>
+        </section>
+
+        <section class="slide slide-guard paper" id="slide-10" data-title="AI 可以做能力，不能替人承担责任" aria-hidden="true">
+          <div class="kicker">架构 · 把能力和责任分开</div>
+          <h2>AI 可以判断和生成，<br><em>但不能自由修改线上菜单。</em></h2>
+          <div class="guard-pipeline">
+            <div><b>01</b><strong>规则引擎</strong><span>确定性问题<br>快、可解释</span></div>
+            <i>→</i>
+            <div><b>02</b><strong>AI Agent</strong><span>语义诊断<br>候选 + 置信度</span></div>
+            <i>→</i>
+            <div class="human-gate"><b>03</b><strong>商家确认</strong><span>逐字段选择<br>事实不足必须确认</span><small>责任闸门</small></div>
+            <i>→</i>
+            <div><b>04</b><strong>发布服务</strong><span>校验 / 幂等<br>核对 / 回滚</span></div>
+          </div>
+          <div class="safety-line"><strong>安全底线</strong><span>Agent 不持有写凭证</span><span>before / after 可追溯</span><span>失败不拖垮整批</span><span>发布后重新读取核对</span></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">10</div>
+          <aside class="speaker-note">规则负责快和确定，AI 负责理解和候选，人负责选择，发布服务负责把高风险动作做成可审计事务。<strong>[Sources]</strong> 产品文档/03-架构设计/Menu-Copilot-系统架构.md；wiki/产品/AI菜单优化Agent与ChangeSet架构.md。</aside>
+        </section>
+
+        <section class="slide slide-flywheel soft" id="slide-11" data-title="每轮都留下可复用证据" aria-hidden="true">
+          <div class="kicker">工作方式 · 每轮都留下可复用证据</div>
+          <h2>AI-native 协作不是一次交付，<br>而是一条<em>连续学习飞轮</em>。</h2>
+          <div class="flywheel" aria-label="调研、定义、原型、实现、验证、沉淀的循环">
+            <div class="orbit" aria-hidden="true"></div>
+            <div class="fly-center"><strong>AI × 人</strong><span>更快一轮<br>更真一层</span></div>
+            <div class="fly-node n1"><b>01</b><strong>调研</strong><span>材料 · 竞品 · 平台</span></div>
+            <div class="fly-node n2"><b>02</b><strong>定义</strong><span>假设 · 范围 · 标准</span></div>
+            <div class="fly-node n3"><b>03</b><strong>原型</strong><span>体验 · 文案 · 流程</span></div>
+            <div class="fly-node n4"><b>04</b><strong>实现</strong><span>代码 · 接口 · 部署</span></div>
+            <div class="fly-node n5"><b>05</b><strong>验证</strong><span>样本 · 数据 · 风险</span></div>
+            <div class="fly-node n6"><b>06</b><strong>沉淀</strong><span>决策 · 发布 · 输入</span></div>
+          </div>
+          <p class="fly-thesis">AI 提高每一轮的速度，<strong>人决定是否进入下一轮。</strong></p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">11</div>
+          <aside class="speaker-note">这一页讲循环，不讲工具清单。每轮都应产出下一轮可以复用的证据。<strong>[Sources]</strong> 文档维护/团队协作与运营规范.md；产品文档/05-发布记录/产品决策日志.md。</aside>
+        </section>
+
+        <section class="slide slide-ui-collab paper" id="slide-12" data-title="让 AI 发散，让人守住 UI 质量" aria-hidden="true">
+          <div class="kicker">有的放矢 · 能力边界决定分工</div>
+          <h2>AI 很会把第一版做快，<br>但还不太会把 UI <em>做好。</em></h2>
+          <div class="ui-story" aria-label="从描述需求、AI 批量生成，到人工比较调整和真实页面的 UI 协作过程">
+            <figure class="ui-step ui-step-one">
+              <div class="ui-prompt"><b>01</b><strong>我先描述方向</strong><p>“目标用户是谁、这一屏要解决什么、信息层级和气质应该怎样。”</p></div>
+              <div class="ui-shot"><img src="assets/ui-iteration-canvas.png" alt="Figma 画布中由 AI 快速生成的大量菜单产品界面方案"></div>
+              <figcaption><strong>让 AI 做它擅长的发散</strong><span>把描述转成界面骨架，快速铺开多个可比较方向</span></figcaption>
+            </figure>
+            <i class="ui-arrow" aria-hidden="true">→</i>
+            <figure class="ui-step ui-step-two">
+              <div class="ui-shot"><img src="assets/ui-landing-iterations.png" alt="Figma 画布中对落地页结构、内容和视觉进行多轮比较调整"></div>
+              <figcaption><b>02</b><strong>人来修它做不好的细节</strong><span>比例、层级、留白和交互，需要逐项比较、删改、重组</span></figcaption>
+            </figure>
+            <i class="ui-arrow" aria-hidden="true">→</i>
+            <figure class="ui-step ui-step-three">
+              <div class="ui-shot"><img src="assets/aprim-homepage.png" alt="经过多轮人机协作收敛后的 Aprim 产品首页"></div>
+              <figcaption><b>03</b><strong>守门后才进入真实产品</strong><span>品牌一致、信息清楚、真正可用，才允许成为最终方案</span></figcaption>
+            </figure>
+          </div>
+          <div class="ui-thesis" aria-label="AI 与人在 UI 设计中的能力分工">
+            <span><b>AI 做得好的</b><strong>发散 · 骨架 · 第一版</strong></span>
+            <span><b>人来守门的</b><strong>比例 · 层级 · 交互 · 品牌</strong></span>
+          </div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">12</div>
+          <aside class="speaker-note">这页先承认当前能力边界：AI 能很快把描述变成界面骨架并生成很多第一版，但 UI 的比例、层级、留白、交互细节和品牌一致性还不够稳定。因此我们有的放矢：AI 负责发散和提速，我在 Figma 画布里比较、删改、重组，作为最终质量守门员；只有真正清楚、可用、统一的方案才进入产品。<strong>[Sources]</strong> 用户提供的两张 Figma 过程截图与 Aprim 产品首页截图。</aside>
+        </section>
+
+        <section class="slide slide-insight paper" id="slide-13" data-title="让埋点数据长出下一轮需求" aria-hidden="true">
+          <div class="kicker">数据闭环 · 埋点与 AI 分析已经打通</div>
+          <h2>让 AI 直接读真实行为，<br>把数据变成<em>下一轮需求候选</em>。</h2>
+          <figure class="posthog-proof">
+            <img src="assets/posthog-acquisition-content.png" alt="Aprim Landing 在 PostHog 中的 Acquisition & Content 看板">
+            <figcaption><b>真实看板</b><span>CTA 点击 · 内容区块到达 · 时间趋势</span></figcaption>
+          </figure>
+          <div class="insight-loop compact" aria-label="从埋点到新需求再到实验的数据闭环">
+            <div><b>01</b><strong>埋点回流</strong><span>访问、区块、CTA<br>以及应用内关键动作</span></div>
+            <i>↓</i><div><b>02</b><strong>AI 分析</strong><span>漏斗、流失、分群<br>异常与内容偏好</span></div>
+            <i>↓</i><div><b>03</b><strong>需求候选</strong><span>问题、证据、方案<br>成功标准与优先级</span></div>
+            <i>↓</i><div class="human-check"><b>04</b><strong>人审后实验</strong><span>确认价值与风险<br>实现、发布、再观察</span></div>
+          </div>
+          <p class="insight-thesis">AI 可以主动发现问题并提出需求；是否立项，仍由人结合样本质量、业务价值和风险判断。</p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">13</div>
+          <aside class="speaker-note">现在埋点与 AI 分析链路已经打通。看板能够呈现 CTA 点击、内容区块到达和时间趋势；AI 进一步读取漏斗、流失、分群和内容偏好，形成带证据的需求候选。AI 不自动替团队立项，人仍要判断样本是否可信、需求是否值得做。<strong>[Sources]</strong> 用户提供的 Aprim Landing PostHog Acquisition & Content 看板截图；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md；raw/codex/2026-08-06/AI菜单/Aprim-PostHog埋点与隐私策略.md。</aside>
+        </section>
+
+        <section class="slide slide-growth ink" id="slide-14" data-title="让产品素材进入 AI 增长闭环" aria-hidden="true">
+          <div class="kicker light">增长闭环 · 产品自己生产内容</div>
+          <h2>产品素材，也可以被 AI 变成<br><em>持续获客的内容。</em></h2>
+          <div class="reel-strip" aria-label="由真实菜品素材生成的短视频内容示意">
+            <figure><img src="assets/pizza-after.webp" alt="披萨短视频画面示意"><span>案例前后</span><b>01</b></figure>
+            <figure class="video-card"><video src="assets/aprim-br-20s-promo.mp4" poster="assets/aprim-br-20s-poster.jpg" aria-label="Aprim 巴西市场 20 秒 AI 宣传视频" controls muted loop playsinline preload="metadata" data-slide-autoplay></video><span>AI 内容工厂</span><b>02</b></figure>
+            <figure><img src="assets/fried-chicken-after.webp" alt="炸鸡短视频画面示意"><span>经营知识</span><b>03</b></figure>
+          </div>
+          <div class="growth-flow">
+            <div><b>真实素材</b><span>菜品、案例、产品事实</span></div><i>↓</i>
+            <div><b>AI 内容工厂</b><span>视频 · 旁白 · 字幕 · 封面 · 文案</span></div><i>↓</i>
+            <div><b>自媒体账号</b><span>持续发布案例、教程和经营知识</span></div><i>↓</i>
+            <div><b>数据回流</b><span>播放 → 访问 → 留资 → 试用 → 反馈</span></div>
+          </div>
+          <p class="growth-caveat">这是下一阶段的增长实验：渠道是否成立，仍要由真实发布与转化数据证明。</p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">14</div>
+          <aside class="speaker-note">中间这支 20 秒视频就是 AI 内容工厂的实际产物。真实素材和产品事实进入后，AI 可以协作完成脚本、画面、旁白、字幕、封面与文案，自媒体账号持续分发；播放、访问、留资和试用数据再回到产品与内容迭代。<strong>[Sources]</strong> 用户提供的 aprim-br-20s-promo_2026-08-13_11-22-59.mp4；产品文档/02-功能规范/Menu-Copilot-获客与Showcase.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md。</aside>
+        </section>
+
+        <section class="slide slide-split" id="slide-15" data-title="速度交给 AI，方向和责任留在人手里" aria-hidden="true">
+          <div class="split-side ai-side">
+            <div class="kicker light">AI 加速</div>
+            <h2>把循环<br>跑得更快</h2>
+            <ul><li>检索、方案、原型与代码实现</li><li>测试策略与测试用例草拟</li><li>浏览器回归与边界检查</li><li>i18n 翻译、缺失键与语言审计</li><li>文档、决策和发布记录整理</li></ul>
+            <p class="ai-time-note">大量重复工作由 AI 先跑一遍，<br><strong>显著缩短准备与回归时间。</strong></p>
+          </div>
+          <div class="split-side human-side">
+            <div class="kicker">人来负责</div>
+            <h2>决定什么<br>值得进入现实</h2>
+            <ul><li>问题值不值得做</li><li>事实和样本能不能信</li><li>范围与承诺到哪里</li><li>高风险动作是否允许</li><li>上线、停止或转向</li></ul>
+          </div>
+          <div class="responsibility-question"><span>唯一的判断标准</span><strong>如果错了，谁承担后果？</strong></div>
+          <div class="folio split-folio">15</div>
+          <aside class="speaker-note">实际节省时间的不只是写代码。AI 先草拟测试策略与测试用例、执行浏览器回归与边界检查，还能完成 i18n 翻译、缺失 key 检查和多语言一致性审计；人只需要集中处理失败项、事实判断和最终验收。经营数字能不能写、接口没联调能不能说上线，仍必须由人判断并留痕。<strong>[Sources]</strong> 用户补充；文档维护/团队协作与运营规范.md；产品文档/05-发布记录/产品决策日志.md。</aside>
+        </section>
+
+        <section class="slide slide-roles paper" id="slide-16" data-title="三个人覆盖一整条产品链路" aria-hidden="true">
+          <div class="kicker">角色覆盖 · AI-native 的真实杠杆</div>
+          <h2>三个人，不是只做三种角色。<br>我们覆盖的是<em>一整条产品链路。</em></h2>
+          <div class="role-count" aria-label="十九种角色能力"><strong>19</strong><span>顶角色帽子</span></div>
+          <div class="role-map" aria-label="从洞察、定义、实现、交付到增长的角色覆盖地图">
+            <section class="role-phase">
+              <header><b>01</b><strong>看见机会</strong><span>INSIGHT</span></header>
+              <ul><li>用户研究</li><li>市场研究</li><li>数据分析</li></ul>
+            </section>
+            <section class="role-phase">
+              <header><b>02</b><strong>定义产品</strong><span>DEFINE</span></header>
+              <ul><li>产品经理</li><li>交互设计</li><li>UI 设计</li></ul>
+            </section>
+            <section class="role-phase">
+              <header><b>03</b><strong>把它做出</strong><span>BUILD</span></header>
+              <ul><li>前端工程</li><li>后端工程</li><li>AI / 算法</li><li>数据工程 / 埋点</li></ul>
+            </section>
+            <section class="role-phase">
+              <header><b>04</b><strong>安全交付</strong><span>DELIVER</span></header>
+              <ul><li>测试 / QA</li><li>i18n / 本地化</li><li>发布运维</li><li>安全 / 隐私</li></ul>
+            </section>
+            <section class="role-phase role-growth">
+              <header><b>05</b><strong>找到用户</strong><span>GROWTH</span></header>
+              <ul><li>产品运营</li><li>商家运营</li><li>BD / 客户成功</li><li>内容 / 自媒体运营</li><li>增长投放</li></ul>
+            </section>
+          </div>
+          <p class="role-thesis"><strong>AI 没有替代 19 个人。</strong><span>它让小团队在每个环节先跑出第一版；人负责串联、验收，并承担最终结果。</span></p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">16</div>
+          <aside class="speaker-note">这不是说 AI 替代了 19 个全职岗位，而是这次从 0 到 1 的实际工作跨越了 19 类角色能力。自媒体与营销属于增长链路：内容与自媒体运营负责持续生产、分发和账号经营，增长投放负责付费渠道、素材实验与转化。容易漏掉的角色包括用户研究、市场研究、数据工程与埋点、i18n 本地化、发布运维、安全隐私，以及 BD 与客户成功。AI 帮每种角色先完成检索、草案、批量生成或初步检查，人负责跨角色取舍与最终验收。<strong>[Sources]</strong> 用户补充；文档维护/团队协作与运营规范.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md；产品文档/02-功能规范/Menu-Copilot-获客与Showcase.md；产品文档/05-发布记录/Menu-Copilot-发布记录.md。</aside>
+        </section>
+
+        <section class="slide slide-memory ink" id="slide-17" data-title="知识库是共享的产品内存" aria-hidden="true">
+          <div class="kicker light">知识系统 · 让下一次工作从最新事实开始</div>
+          <h2>知识库不是归档柜，<br>而是 AI 与团队共享的<em>产品内存</em>。</h2>
+          <div class="memory-flow">
+            <div class="paper-sheet"><b>01</b><strong>Raw 来源</strong><span>会议 / 调研 / 对话</span></div><i>→</i>
+            <div class="paper-sheet"><b>02</b><strong>正式知识</strong><span>当前结论 / 范围</span></div><i>→</i>
+            <div class="paper-sheet"><b>03</b><strong>决策日志</strong><span>为什么改 / 取代什么</span></div><i>→</i>
+            <div class="paper-sheet"><b>04</b><strong>发布记录</strong><span>Mock / 推送 / 部署</span></div><i>→</i>
+            <div class="paper-sheet current"><b>05</b><strong>下一次 AI</strong><span>先读 truth source</span></div>
+          </div>
+          <div class="memory-return"><span>新证据写回</span><i aria-hidden="true"></i><span>旧结论保留替代关系</span></div>
+          <p class="memory-thesis">AI 不只“记得更多”，还要知道什么是当前事实，什么只是历史方案。</p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">17</div>
+          <aside class="speaker-note">raw 只保来源，产品文档才是现行口径；旧结论不能静默覆盖；发布事实区分已实现、已推送、已部署。<strong>[Sources]</strong> AGENTS.md.md；产品文档/README.md；文档维护/来源与修订规范.md。</aside>
+        </section>
+
+        <section class="slide slide-inequalities paper" id="slide-18" data-title="三个不等号" aria-hidden="true">
+          <div class="kicker">复盘 · 三个不等号</div>
+          <h2>AI 让左边变快，<br>团队必须把右边定义得更清楚。</h2>
+          <div class="ineq-list">
+            <div><strong>Demo</strong><b>≠</b><em>产品</em><span>能点，不代表真实数据、授权和交付成立</span></div>
+            <div><strong>生成</strong><b>≠</b><em>采纳</em><span>模型跑过，不代表商家相信并长期保留</span></div>
+            <div><strong>已推送</strong><b>≠</b><em>已上线</em><span>代码、部署、用户可用状态必须分开</span></div>
+          </div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">18</div>
+          <aside class="speaker-note">这三个不等号贯穿整个项目。AI 会让左边非常快，因此要更早建立右边的验收标准。<strong>[Sources]</strong> 产品文档/05-发布记录/Menu-Copilot-发布记录.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md。</aside>
+        </section>
+
+        <section class="slide slide-gates counter" id="slide-19" data-title="穿过六个真实世界关口" aria-hidden="true">
+          <div class="kicker">从原型到闭环 · 生产化清单</div>
+          <h2>下一阶段不是继续堆页面，<br>而是穿过六个真实世界关口。</h2>
+          <div class="gate-row">
+            <div><b>01</b><strong>真实数据</strong><span>Provider<br>数据库 / 快照</span></div>
+            <div><b>02</b><strong>真实模型</strong><span>评测 / 成本<br>失败 / 重试</span></div>
+            <div><b>03</b><strong>真实授权</strong><span>绑定 / Token<br>撤回 / 审计</span></div>
+            <div><b>04</b><strong>真实发布</strong><span>ChangeSet<br>写回 / 回滚</span></div>
+            <div><b>05</b><strong>真实用户</strong><span>种子商家<br>BD 现场共创</span></div>
+            <div><b>06</b><strong>真实价值</strong><span>采纳 / 保留<br>复用 / 付费</span></div>
+          </div>
+          <div class="exit-rule"><strong>退出标准</strong><span>看过效果仍不使用</span><i>·</i><span>数据长期不可得</span><i>·</i><span>平台风险不可控</span><i>·</i><span>成本随用户线性增长</span></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">19</div>
+          <aside class="speaker-note">把下一阶段讲成六个“真实”，不是技术 backlog。AI-native 不代表无限迭代，退出标准同样重要。<strong>[Sources]</strong> 产品文档/02-功能规范/Menu-Copilot-路线图与验证计划.md；产品文档/03-架构设计/Menu-Copilot-系统架构.md。</aside>
+        </section>
+
+        <section class="slide slide-close paper" id="slide-20" data-title="AI-native 是把假设更快变成事实" aria-hidden="true">
+          <div class="close-photo close-concept"><img src="assets/cover-concept-v2.png" alt="从模糊假设经过协作与证据，最终形成清晰产品的抽象视觉"></div>
+          <div class="close-copy">
+            <img class="brand-logo" src="assets/logo.png" alt="Aprim AI">
+            <div class="kicker">最后，带走一句话</div>
+            <h2>AI-native 的本质，<br>是让小团队更快地<br><em>把假设变成事实。</em></h2>
+            <p>方向由人负责 · 速度交给 AI<br>所有结论回到真实用户与可验证证据</p>
+            <small>OPC · 从 0→1，继续验证</small>
+          </div>
+          <div class="folio">20</div>
+          <aside class="speaker-note">用这一句话结束，不加“谢谢”页。可邀请大家讨论：在自己的工作里，哪些环节可以交给 AI 加速，哪些判断必须由人负责？<strong>[Sources]</strong> 文档维护/团队协作与运营规范.md；产品文档/01-产品概览/OPC-产品组合与验证.md。</aside>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <nav class="controls" aria-label="演示控制">
+    <button type="button" id="prevBtn" aria-label="上一页" title="上一页（←）">←</button>
+    <div class="progress-wrap" aria-hidden="true"><span id="progress"></span></div>
+    <span class="page-indicator"><b id="currentPage">01</b><i>/</i><span>20</span></span>
+    <button type="button" id="nextBtn" aria-label="下一页" title="下一页（→）">→</button>
+    <button type="button" id="notesBtn" class="text-control" aria-label="显示讲者提示" title="讲者提示（N）">N</button>
+    <button type="button" id="overviewBtn" class="text-control" aria-label="显示全部页面" title="总览（O）">O</button>
+    <button type="button" id="fullscreenBtn" class="text-control" aria-label="进入全屏" title="全屏（F）">F</button>
+  </nav>
+
+  <aside class="notes-panel" id="notesPanel" aria-live="polite" aria-hidden="true">
+    <div><span>讲者提示</span><button type="button" id="closeNotes" aria-label="关闭讲者提示">×</button></div>
+    <p id="notesContent"></p>
+  </aside>
+
+  <div class="overview" id="overview" aria-hidden="true">
+    <header><strong>演示总览</strong><span>点击任意页面进入 · 按 O 或 Esc 关闭</span></header>
+    <div class="overview-grid" id="overviewGrid"></div>
+  </div>
+
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+  <script src="deck.js"></script>
+</body>
+</html>
