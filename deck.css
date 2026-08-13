@@ -414,6 +414,9 @@ img { display: block; max-width: 100%; }
 .page-indicator { display: flex; align-items: baseline; gap: 5px; min-width: 70px; justify-content: center; font-size: 14px; font-variant-numeric: tabular-nums; }
 .page-indicator b { color: #fff; font-size: 18px; }.page-indicator i { opacity: .35; font-style: normal; }.page-indicator span { opacity: .55; }
 body.clean .controls { display: none; }
+html:fullscreen .controls,
+html:-webkit-full-screen .controls,
+body.is-fullscreen .controls { display: none !important; }
 
 .notes-panel {
   position: fixed;

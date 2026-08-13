@@ -74,11 +74,24 @@
 
   async function toggleFullscreen() {
     try {
-      if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
-      else await document.exitFullscreen();
+      const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
+      if (!fullscreenElement) {
+        const requestFullscreen = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen;
+        if (!requestFullscreen) throw new Error('Fullscreen API unavailable');
+        await requestFullscreen.call(document.documentElement);
+      } else {
+        const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+        if (!exitFullscreen) throw new Error('Fullscreen API unavailable');
+        await exitFullscreen.call(document);
+      }
     } catch (_) {
       announcer.textContent = '当前浏览器不允许进入全屏。';
     }
+  }
+
+  function syncFullscreenState() {
+    const isFullscreen = Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+    document.body.classList.toggle('is-fullscreen', isFullscreen);
   }
 
   slides.forEach((slide, index) => {
@@ -96,6 +109,8 @@
   document.getElementById('overviewBtn').addEventListener('click', () => toggleOverview());
   document.getElementById('fullscreenBtn').addEventListener('click', toggleFullscreen);
   document.getElementById('closeNotes').addEventListener('click', () => toggleNotes(false));
+  document.addEventListener('fullscreenchange', syncFullscreenState);
+  document.addEventListener('webkitfullscreenchange', syncFullscreenState);
 
   document.addEventListener('keydown', event => {
     if (event.metaKey || event.ctrlKey || event.altKey) return;
