@@ -1,0 +1,21 @@
+{
+  "decks": [
+    {
+      "slug": "menu-copilot",
+      "path": "/menu-copilot/",
+      "title": "把一个想法，跑成一个产品",
+      "summary": "Menu Copilot 从 0→1，以及三人团队如何 AI-native 协作",
+      "slides": 20,
+      "status": "published"
+    },
+    {
+      "slug": "phase-iii",
+      "path": "/phase-iii/",
+      "title": "把一个想法，跑成一条流水线",
+      "summary": "从产品 0→1 走向 Phase III：Agent—Human—Agent",
+      "slides": 15,
+      "status": "ready",
+      "featured": true
+    }
+  ]
+}

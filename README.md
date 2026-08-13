@@ -1,6 +1,22 @@
-# Aprim Menu Copilot：从 0 到 1
+# Aprim AI 演示文稿
 
-一份中文、故事化的 HTML 演示文稿，介绍 Aprim Menu Copilot 的 0→1 过程，以及小团队如何用 AI-native 协作覆盖产品、设计、工程、测试、数据和增长链路。
+一个支持多份讲解稿的静态 HTML 演示仓库。每份演示使用独立路径，共享基础样式、素材和键盘交互。
+
+## 当前路径
+
+- `/`：演示稿导航首页
+- `/menu-copilot/`：原始 20 页版本——Menu Copilot 从 0→1 与三人团队 AI-native 协作
+- `/phase-iii/`：15 页融合版——从产品 0→1 走向 Agent—Human—Agent 流水线
+
+## 新增讲解稿
+
+1. 新建一个语义明确的目录，例如 `quarterly-review/`。
+2. 在目录内创建 `index.html`。
+3. 复用根目录的资源：`../deck.css`、`../deck.js` 和 `../assets/...`。
+4. 每页使用 `.slide`，提供连续的 `id="slide-N"`、`data-title` 和 `.speaker-note`。
+5. 页码总数由共享脚本根据页面数量自动更新。
+
+推荐使用短横线 slug，并保持已发布路径稳定，避免已有分享链接失效。
 
 ## 本地查看
 

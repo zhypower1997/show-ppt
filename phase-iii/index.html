@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101010">
+  <title>把一个想法，跑成一条流水线｜Aprim Menu Copilot 0→1 × Phase III</title>
+  <meta name="description" content="Aprim Menu Copilot 从 0 到 1，以及三人团队如何从 AI 个人提效走向 Agent—Human—Agent 流水线。">
+  <link rel="stylesheet" href="../deck.css">
+</head>
+<body class="phase-iii-deck">
+  <div class="ambient" aria-hidden="true"></div>
+
+  <main class="stage" aria-label="Aprim Menu Copilot 0 到 1 与 Phase III 演示文稿">
+    <div class="deck-shell" id="deckShell">
+      <article class="deck" id="deck">
+
+        <section class="slide slide-cover is-active" id="slide-1" data-title="把一个想法，跑成一条流水线" aria-hidden="false">
+          <div class="cover-copy">
+            <img class="brand-logo" src="../assets/logo.png" alt="Aprim AI">
+            <p class="cover-eyebrow">MENU COPILOT · 0→1 × PHASE III</p>
+            <h1>把一个想法，<br><em>跑成一条流水线</em></h1>
+            <p class="cover-sub">Menu Copilot 从 0→1<br>以及三人团队如何走向 Agent—Human—Agent</p>
+            <p class="cover-meta">OPC 内部分享 · 2026.08</p>
+          </div>
+          <figure class="cover-visual cover-concept" aria-label="一个模糊想法经过人与 AI 的协作、验证和取舍，逐渐收束成真实产品">
+            <div class="concept-slice concept-chaos"><img src="../assets/cover-concept-v2.png" alt="未经整理的想法线索"></div>
+            <div class="concept-slice concept-process"><img src="../assets/cover-concept-v2.png" alt="协作、验证和取舍的过程节点"></div>
+            <div class="concept-slice concept-product"><img src="../assets/cover-concept-v2.png" alt="最终收束成清晰产品实体"></div>
+            <figcaption><span>模糊假设</span><i>→</i><span>真实产品</span><i>→</i><strong>组织流水线</strong></figcaption>
+          </figure>
+          <div class="cover-foot">OPC · AI-native 产品实践</div>
+          <div class="folio">01</div>
+          <aside class="speaker-note">开场先给结论：这不是一个“AI 帮我们写代码”的故事。前半段用 Menu Copilot 说明小团队怎样把模糊机会压成可验证产品；后半段回答更重要的问题——怎样把个人速度变成组织吞吐，让工作在 Agent、人和系统之间自动接力。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；产品文档/01-产品概览/Menu-Copilot-产品总览.md；https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042；封面理念视觉由 OpenAI 图像生成。</aside>
+        </section>
+
+        <section class="slide slide-statement ink" id="slide-2" data-title="0→1 真正难的，不是把页面做出来" aria-hidden="true">
+          <div class="kicker light">先讲一个反直觉的结论</div>
+          <div class="statement-wrap">
+            <p class="statement-index">01 / REALITY</p>
+            <h2>0→1 真正难的，<br><span class="strike-word">不是</span>把页面做出来</h2>
+            <p class="statement-answer">而是把方向、数据、体验、工程和商业边界，<br>持续压到同一个<span>可验证闭环</span>里。</p>
+          </div>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">02</div>
+          <aside class="speaker-note">页面、原型甚至代码都可以很快生成，但“谁愿意用、为什么用、如何安全生效、如何证明价值”仍然要一层层回答。AI-native 的第一步不是自动化，而是把问题和验收标准定义清楚。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；文档维护/团队协作与运营规范.md。</aside>
+        </section>
+
+        <section class="slide slide-start coral" id="slide-3" data-title="三个人的约束，逼我们先选对问题" aria-hidden="true">
+          <div class="kicker light">起点 · 资源少，问题必须选得准</div>
+          <div class="start-number"><strong>3</strong><span>人左右</span><p>不是卖惨。<br>它让我们无法用人力掩盖错误方向。</p></div>
+          <div class="start-decisions">
+            <div><b>01</b><strong>小场景</strong><span>输入明确，几分钟看到结果</span></div>
+            <div><b>02</b><strong>强痛点</strong><span>商家一眼能判断值不值得改</span></div>
+            <div><b>03</b><strong>可闭环</strong><span>诊断、确认、发布与回滚能连起来</span></div>
+          </div>
+          <div class="start-choice"><span>所以，第一款产品选择了</span><strong>菜单</strong><i>真实 · 高频 · 可见 · 可行动</i></div>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">03</div>
+          <aside class="speaker-note">原来的“团队约束”和“为什么做菜单”合成一页。三人团队意味着不能大而全，也不能用演示效果替代真实价值。我们在菜单、评论、私域营销等方向中先选菜单，因为输入和结果最具体，也最容易跑出端到端闭环。<strong>[Sources]</strong> 产品文档/01-产品概览/OPC-产品组合与验证.md；wiki/组织与战略/OPC产品选择与验证方法.md；产品文档/01-产品概览/巴西市场与增长基础.md。</aside>
+        </section>
+
+        <section class="slide slide-evidence soft" id="slide-4" data-title="69 家门店把感觉变成事实" aria-hidden="true">
+          <div class="kicker">证据 · 69 家门店 / 2,564 道菜 / 409 个分类</div>
+          <h2>样本把“感觉有问题”，<br>变成了可以讨论的事实。</h2>
+          <div class="evidence-rule" aria-hidden="true"></div>
+          <div class="metrics">
+            <div class="metric"><strong>44.3<sup>%</sup></strong><p>缺图或默认图</p><span>1,135 道菜</span></div>
+            <div class="metric"><strong>27.6<sup>%</sup></strong><p>缺少描述</p><span>708 道菜</span></div>
+            <div class="metric"><strong>7.4<sup>%</sup></strong><p>同店重复名称</p><span>190 道菜</span></div>
+          </div>
+          <p class="method-note"><strong>样本口径</strong><span>另有 14.2% 的分类仅含 1 道菜。样本后 50 店按“至少一张真实图片”筛选，不能外推为巴西市场总体比例。</span></p>
+          <div class="folio">04</div>
+          <aside class="speaker-note">只讲三个数字：44.3%、27.6%、7.4%。它们不是市场规模预测，而是机会发现证据：问题存在、用户能理解，也可以被产品化处理。<strong>[Sources]</strong> 产品文档/01-产品概览/AI菜单诊断-BRD.md；wiki/产品/Anota菜单样本与诊断规则.md。</aside>
+        </section>
+
+        <section class="slide slide-three-phase ink" id="slide-5" data-title="24 天，完成三次收敛" aria-hidden="true">
+          <div class="kicker light">时间线 · 2026.07.20—08.12</div>
+          <h2>24 天不是“做完一版”，<br>而是连续完成<em>三次收敛。</em></h2>
+          <div class="phase-rail">
+            <section><time>07.20—07.23</time><b>01</b><strong>机会 → 可解释原型</strong><span>菜单样本、规则、Agent、ChangeSet 与安全边界</span></section>
+            <i>→</i>
+            <section><time>07.27—07.31</time><b>02</b><strong>原型 → 工程与共创</strong><span>Next.js、Mock / Live、Showcase、BD 现场选择</span></section>
+            <i>→</i>
+            <section><time>08.01—08.12</time><b>03</b><strong>单线 → 双轨验证</strong><span>图片 MVP 快速验证；菜单诊断推进平台闭环</span></section>
+          </div>
+          <p class="phase-invariant"><small>每次收敛都保留四条底线</small><strong>真实输入 · 可解释建议 · 人工确认 · 可审计与回滚</strong></p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">05</div>
+          <aside class="speaker-note">把原来的七个时间点和五次范围变化压成三段。第一段找到问题和规则；第二段把它工程化并进入业务共创；第三段根据平台依赖拆成图片 MVP 与菜单诊断双轨。多次变化不是摇摆，而是证据不断写进边界。<strong>[Sources]</strong> 产品文档/05-发布记录/Menu-Copilot-发布记录.md；产品文档/05-发布记录/产品决策日志.md；产品文档/02-功能规范/Menu-Copilot-路线图与验证计划.md。</aside>
+        </section>
+
+        <section class="slide slide-user-loop paper" id="slide-6" data-title="商家不是来用 AI，而是完成一次安全动作" aria-hidden="true">
+          <div class="kicker">产品定义 · 用户只关心结果和风险</div>
+          <h2>商家不是来“使用 AI”，<br>而是来完成一次<em>安全动作。</em></h2>
+          <div class="merchant-questions">
+            <span><b>01</b>最值得先改什么？</span><span><b>02</b>建议符合真实菜品吗？</span><span><b>03</b>改错了能不能撤回？</span>
+          </div>
+          <div class="merchant-path">
+            <div><b>看见</b><span>真实菜单问题</span></div><i>→</i>
+            <div><b>理解</b><span>证据与优先级</span></div><i>→</i>
+            <div class="merchant-gate"><b>确认</b><span>逐字段选择</span></div><i>→</i>
+            <div><b>生效</b><span>发布、核对、重试</span></div><i>→</i>
+            <div><b>观察</b><span>保留、复用、回滚</span></div>
+          </div>
+          <p class="merchant-thesis">“生成完成” <strong>永远不等于</strong> “商家已采纳”</p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">06</div>
+          <aside class="speaker-note">商家不需要学习 Prompt。他只需要判断最该改什么、建议是否真实、改错能否撤回。因此体验必须从诊断走到确认、生效和观察；生成只是中间能力，不是业务结果。<strong>[Sources]</strong> 产品文档/01-产品概览/AI菜单诊断-BRD.md；产品文档/01-产品概览/Menu-Copilot-产品总览.md；产品文档/02-功能规范/Menu-Copilot-诊断与建议采用.md。</aside>
+        </section>
+
+        <section class="slide slide-runtime paper" id="slide-7" data-title="产品本身，已经是一条受控的 Agent—Human—Agent 流水线" aria-hidden="true">
+          <div class="kicker">产品运行时 · 先把能力和责任分开</div>
+          <h2>产品本身，已经是一条受控的<br><em>Agent—Human—Agent</em> 流水线。</h2>
+          <div class="runtime-pipeline">
+            <div><b>01</b><strong>菜单快照</strong><span>真实输入</span></div><i>→</i>
+            <div><b>02</b><strong>规则引擎</strong><span>确定性事实</span></div><i>→</i>
+            <div class="agent-node"><b>03</b><strong>优化 Agent</strong><span>候选与置信度</span></div><i>→</i>
+            <div><b>04</b><strong>ChangeSet</strong><span>before / after</span></div><i>→</i>
+            <div class="human-node"><b>05</b><strong>商家确认</strong><span>责任闸门</span></div><i>→</i>
+            <div class="release-node"><b>06</b><strong>Apply Service</strong><span>审计 / 回滚</span></div>
+          </div>
+          <p class="runtime-thesis">Agent 不直接写线上：<strong>生成与生效必须分开。</strong></p>
+          <div class="safety-line"><strong>确定性发布</strong><span>权限校验</span><span>幂等与重试</span><span>发布后回读</span><span>逐项审计</span><span>失败可回滚</span></div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">07</div>
+          <aside class="speaker-note">这是从产品设计进入组织协作的桥。菜单快照、规则结果、ChangeSet、人工确认和发布证据都是结构化工件；Agent 负责生成，人负责事实与风险，Apply Service 负责确定性执行。这个产品运行时已经呈现 V3.0 的基本形态。<strong>[Sources]</strong> 产品文档/03-架构设计/Menu-Copilot-系统架构.md；wiki/产品/AI菜单优化Agent与ChangeSet架构.md；产品文档/02-功能规范/Menu-Copilot-发布与版本治理.md。</aside>
+        </section>
+
+        <section class="slide slide-maturity soft" id="slide-8" data-title="真正的升级，不是多一个 Copilot，而是改变交接界面" aria-hidden="true">
+          <div class="kicker">组织演进 · 个人速度不等于系统吞吐</div>
+          <h2>真正的升级，不是多一个 Copilot，<br>而是<em>改变交接界面。</em></h2>
+          <div class="maturity-grid">
+            <section><b>V1.0</b><strong>Human to Human</strong><span>会议、文档和口头同步驱动；上下文反复丢失。</span><small>人搬运信息</small></section>
+            <section><b>V2.0</b><strong>Human—Agent—Human</strong><span>每个人都有 Copilot；部门墙与非标交付物仍然存在。</span><small>人发起、再转交</small></section>
+            <section class="maturity-v3"><b>V3.0 · PHASE III</b><strong>Agent—Human—Agent</strong><span>结构化工件自动流转；人在专业责任点审批、驳回或接管。</span><small>系统接力，人来放行</small></section>
+          </div>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">08</div>
+          <aside class="speaker-note">V1 靠人对人；V2 给每个人配 Copilot，个人变快但组织仍靠人搬运；V3 把交付物标准化，让 Agent 接力执行，人只在责任点放行。关键变化不是 Agent 数量，而是上下游之间的契约。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042。</aside>
+        </section>
+
+        <section class="slide slide-phase-three ink" id="slide-9" data-title="Agent 接力，人类在四个责任点放行" aria-hidden="true">
+          <div class="phase-badge">PHASE III · V3.0</div>
+          <h2>Agent 接力，<br>人类在四个<em>责任点</em>放行。</h2>
+          <div class="phase-pipeline" aria-label="从 PM Agent 到 Release 的 Agent Human Agent 流水线">
+            <div class="phase-agent"><strong>PM<br>Agent</strong><span>需求草案</span></div><i>→</i>
+            <div class="phase-human"><strong>人类 PM</strong><span>业务边界</span></div><i>→</i>
+            <div class="phase-agent"><strong>Design<br>Agent</strong><span>界面方案</span></div><i>→</i>
+            <div class="phase-human"><strong>人类 Design</strong><span>审美规范</span></div><i>→</i>
+            <div class="phase-agent"><strong>Dev<br>Agent</strong><span>实现与构建</span></div><i>→</i>
+            <div class="phase-human"><strong>人类 Dev</strong><span>架构 CR</span></div><i>→</i>
+            <div class="phase-agent"><strong>QA<br>Agent</strong><span>测试与 Eval</span></div><i>→</i>
+            <div class="phase-human"><strong>人类 QA</strong><span>质量放行</span></div><i>→</i>
+            <div class="phase-release"><strong>Release</strong><span>证据归档</span></div>
+          </div>
+          <p class="phase-three-thesis">自动流转的是工件，<strong>不是责任。</strong></p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">09</div>
+          <aside class="speaker-note">这是全场最重要的一页。PM、Design、Dev、QA Agent 持续接力；人类分别对业务边界、审美规范、架构质量和最终质量负责。人工不是随机插入，而是明确的 Gate；审批、驳回和接管都要留下证据并触发下一步。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042。</aside>
+        </section>
+
+        <section class="slide slide-artifact-flow paper" id="slide-10" data-title="自动流转的是工件，不是责任" aria-hidden="true">
+          <div class="kicker">交接契约 · 让下一环节不再重新理解</div>
+          <h2>自动流转的是<em>工件</em>，<br>专业责任仍由人承担。</h2>
+          <div class="artifact-rail">
+            <div><b>01</b><strong>Req Schema</strong><span>目标、范围、边界、验收标准</span></div><i>→</i>
+            <div><b>02</b><strong>UI + Design Tokens</strong><span>页面状态、交互、文案和视觉规范</span></div><i>→</i>
+            <div><b>03</b><strong>PR + Build</strong><span>代码、变更说明、可访问预览</span></div><i>→</i>
+            <div><b>04</b><strong>Test + Eval</strong><span>用例、自动评测、失败与回归证据</span></div><i>→</i>
+            <div><b>05</b><strong>Release Evidence</strong><span>部署、回读、观测、审计与回滚</span></div>
+          </div>
+          <div class="responsibility-rail"><span>业务边界</span><span>审美规范</span><span>架构质量</span><span>质量放行</span><span>线上责任</span></div>
+          <p class="artifact-thesis">修改、驳回与失败不止是沟通结果，<strong>还要写回 Eval 与组织知识。</strong></p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">10</div>
+          <aside class="speaker-note">V3.0 要求每个交接物都有 Schema、状态和验收证据。需求不是一段聊天，设计不是一张截图，研发不是一个口头“好了”，测试也不是一句“应该没问题”。驳回原因和人工修改必须回到 Eval 与知识库，下一轮 Agent 才会真正变好。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042；文档维护/团队协作与运营规范.md；AGENTS.md.md。</aside>
+        </section>
+
+        <section class="slide slide-case soft" id="slide-11" data-title="局部自动化的价值，是更快形成学习闭环" aria-hidden="true">
+          <div class="kicker">外部案例 · WhatsApp Bot 自动评测</div>
+          <h2>局部自动化一旦闭环，<br>收益来自<em>更快的学习。</em></h2>
+          <div class="case-cycle">
+            <div class="case-old"><small>旧模式</small><strong>≈ 7</strong><span>工作日</span></div>
+            <i>→</i>
+            <div class="case-new"><small>AI 自动评测</small><strong>1–2</strong><span>工作日</span></div>
+          </div>
+          <div class="case-metrics">
+            <div><strong>100%</strong><span>评测覆盖<br><small>旧模式抽样不足 5%</small></span></div>
+            <div><strong>13k</strong><span>每周样本沉淀<br><small>旧模式约 600 条</small></span></div>
+          </div>
+          <p class="case-thesis">自动评测 → 人工复核 → 问题回流 → 下一轮方案</p>
+          <p class="case-caveat">案例指标来自分享文档，用于说明组织杠杆，不代表 OPC 当前产出。</p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">11</div>
+          <aside class="speaker-note">这个案例展示了 V3.0 的收益形态：周期从约七个工作日缩短到一到两天，覆盖从不足 5% 提升到 100%，每周样本从约 600 增加到 13,000。价值不只是少几个人，而是问题更早暴露、方案更快回到下一轮。注意说明：这是分享文档中的案例，不是 OPC 当前成绩。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2209163705303。</aside>
+        </section>
+
+        <section class="slide slide-readiness ink" id="slide-12" data-title="OPC 已到 2.5，但还没有跑通整条线" aria-hidden="true">
+          <div class="kicker light">现状判断 · 从局部能力走向系统编排</div>
+          <h2>OPC 已经站在 2.5→3.0 的门槛，<br>但还没有跑通<em>整条线。</em></h2>
+          <div class="readiness-grid">
+            <section><b>已经有</b><strong>可复用的底座</strong><ul><li>三人结果型协作</li><li>ChangeSet 与人工确认</li><li>确定性发布与版本证据</li><li>UI、埋点与知识资产</li></ul></section>
+            <section><b>还缺</b><strong>跨角色编排</strong><ul><li>工件 Schema 与任务状态</li><li>Agent 自动接力与驳回</li><li>自动 Eval 与统一审批入口</li><li>权限、审计和生产观测</li></ul></section>
+            <section class="readiness-pilot"><b>先试哪条</b><strong>Aprim 图片 MVP</strong><ul><li>平台依赖较低</li><li>输入输出清晰</li><li>测试基础较完整</li><li>闭环短，适合连续跑三轮</li></ul></section>
+          </div>
+          <p class="readiness-thesis">下一步不是再加一个 Copilot，而是选择一条新项目链路做<em>系统级试点</em>。</p>
+          <div class="footer light">OPC · AI-native 产品实践</div><div class="folio light">12</div>
+          <aside class="speaker-note">我们并不是从零开始：产品运行时已经有 ChangeSet、确认、发布服务、测试和版本证据；UI 迭代、PostHog 数据链路和知识库也提供了上下文资产。但团队交付仍主要靠人发起、搬运和追进度。因此下一步应该选一条低依赖的新链路，补齐编排、Eval、审批和生产观测。<strong>[Sources]</strong> 产品文档/03-架构设计/Menu-Copilot-系统架构.md；产品文档/03-架构设计/Aprim-Food-Photo-AI前端工程基线.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md；文档维护/团队协作与运营规范.md；raw/codex/2026-08-12/AI菜单/APRIM双轨上线Checklist与三人分工.md。</aside>
+        </section>
+
+        <section class="slide slide-roadmap paper" id="slide-13" data-title="90 天，把一条新项目链路跑成可重复流水线" aria-hidden="true">
+          <div class="kicker">90 天试点 · 先证明可重复，再扩大覆盖</div>
+          <h2>只做一件事：把一条新项目链路，<br>跑成<em>可重复流水线。</em></h2>
+          <div class="roadmap-line">
+            <section><time>第 1—4 周</time><b>01</b><strong>标准化工件</strong><span>Req Schema、Design Tokens、PR 模板、Eval 集、审批与退出标准</span></section>
+            <i>→</i>
+            <section><time>第 5—8 周</time><b>02</b><strong>串联 Agent 与 Gate</strong><span>任务自动委派；受控分支开发；自动构建、测试、预览和驳回回流</span></section>
+            <i>→</i>
+            <section><time>第 9—12 周</time><b>03</b><strong>连续交付三轮</strong><span>同一流水线跑三次；测周期、等待、返工、成本、质量与接管率</span></section>
+          </div>
+          <p class="roadmap-rule"><strong>试点原则</strong><span>新项目优先 3.0；高风险动作始终保留 Human Gate；无法证明更优就回退。</span></p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">13</div>
+          <aside class="speaker-note">第一阶段统一工件和验收；第二阶段让 Agent 自动接力、人工通过标准入口放行；第三阶段连续交付三轮，检验它是不是可重复能力。只跑一次不叫流水线，只在 Demo 中成功也不叫组织能力。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042；产品文档/02-功能规范/Menu-Copilot-路线图与验证计划.md；文档维护/团队协作与运营规范.md。</aside>
+        </section>
+
+        <section class="slide slide-phase-metrics soft" id="slide-14" data-title="Phase III 不看用了多少 AI，只看吞吐、质量和风险" aria-hidden="true">
+          <div class="kicker">验收标准 · 衡量系统，不衡量热闹</div>
+          <h2>Phase III 不看“用了多少 AI”，<br>只看<em>吞吐、质量和风险。</em></h2>
+          <div class="phase-metric-grid">
+            <div><strong>70–80%</strong><span>目标场景进入 3.0<br><small>复杂历史场景可保留 2.5</small></span></div>
+            <div><strong>2×</strong><span>组织产出效率<br><small>重点监测 Cycle Time 与等待</small></span></div>
+            <div><strong>100%</strong><span>高风险动作经过人工 Gate<br><small>审批、发布、回滚均可审计</small></span></div>
+          </div>
+          <div class="reality-guards">
+            <span><strong>Demo ≠ 产品</strong>真实数据、授权与交付成立</span>
+            <span><strong>生成 ≠ 采纳</strong>用户确认、保留与复用成立</span>
+            <span><strong>已推送 ≠ 已上线</strong>部署、可用与观测证据成立</span>
+          </div>
+          <p class="metric-note">以上百分比与倍数是 Phase III 目标参考，不是 OPC 已达成绩。</p>
+          <div class="footer">OPC · AI-native 产品实践</div><div class="folio">14</div>
+          <aside class="speaker-note">组织不应该用 Agent 数量、Prompt 数量或代码生成量衡量转型。参考目标是 70%—80% 场景进入 3.0、整体效率约 2 倍；但不能牺牲质量和责任，所以高风险动作必须 100% 经过人工 Gate。OPC 实际验收还要看周期、等待、一次通过率、返工、线上问题、人工接管和审计完整度。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042；产品文档/05-发布记录/Menu-Copilot-发布记录.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md。</aside>
+        </section>
+
+        <section class="slide slide-close paper" id="slide-15" data-title="先跑通一条 Agent—Human—Agent 流水线" aria-hidden="true">
+          <div class="close-photo close-concept"><img src="../assets/cover-concept-v2.png" alt="从模糊假设经过协作与证据，最终形成清晰产品和组织流水线的抽象视觉"></div>
+          <div class="close-copy">
+            <img class="brand-logo" src="../assets/logo.png" alt="Aprim AI">
+            <div class="kicker">最后，带走一个行动</div>
+            <h2>先跑通一条<br><em>Agent—Human—Agent</em><br>流水线。</h2>
+            <p>方向与责任留给人 · 速度与重复执行交给 Agent<br>所有修改、失败和结果都写回系统</p>
+            <small>OPC · 从 0→1，走向 Phase III</small>
+          </div>
+          <div class="folio">15</div>
+          <aside class="speaker-note">不要从全组织改造开始，也不要继续堆更多 Copilot。先选一条新项目链路，让结构化工件在 Agent 与 Human Gate 之间连续跑三轮。跑通之后，个人速度才会变成组织能力。<strong>[Sources]</strong> https://cooper.didichuxing.com/knowledge/2204862693540/2208863438042；文档维护/团队协作与运营规范.md；产品文档/01-产品概览/OPC-产品组合与验证.md。</aside>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <nav class="controls" aria-label="演示控制">
+    <button type="button" id="prevBtn" aria-label="上一页" title="上一页（←）">←</button>
+    <div class="progress-wrap" aria-hidden="true"><span id="progress"></span></div>
+    <span class="page-indicator"><b id="currentPage">01</b><i>/</i><span>15</span></span>
+    <button type="button" id="nextBtn" aria-label="下一页" title="下一页（→）">→</button>
+    <button type="button" id="notesBtn" class="text-control" aria-label="显示讲者提示" title="讲者提示（N）">N</button>
+    <button type="button" id="overviewBtn" class="text-control" aria-label="显示全部页面" title="总览（O）">O</button>
+    <button type="button" id="fullscreenBtn" class="text-control" aria-label="进入全屏" title="全屏（F）">F</button>
+  </nav>
+
+  <aside class="notes-panel" id="notesPanel" aria-live="polite" aria-hidden="true">
+    <div><span>讲者提示</span><button type="button" id="closeNotes" aria-label="关闭讲者提示">×</button></div>
+    <p id="notesContent"></p>
+  </aside>
+
+  <div class="overview" id="overview" aria-hidden="true">
+    <header><strong>演示总览</strong><span>点击任意页面进入 · 按 O 或 Esc 关闭</span></header>
+    <div class="overview-grid" id="overviewGrid"></div>
+  </div>
+
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+  <script src="../deck.js"></script>
+</body>
+</html>

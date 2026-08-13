@@ -3,12 +3,15 @@
   const shell = document.getElementById('deckShell');
   const progress = document.getElementById('progress');
   const currentPage = document.getElementById('currentPage');
+  const totalPages = document.querySelector('.page-indicator > span');
   const announcer = document.getElementById('announcer');
   const notesPanel = document.getElementById('notesPanel');
   const notesContent = document.getElementById('notesContent');
   const overview = document.getElementById('overview');
   const overviewGrid = document.getElementById('overviewGrid');
   let current = 0;
+
+  if (totalPages) totalPages.textContent = String(slides.length);
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const pad = value => String(value).padStart(2, '0');
