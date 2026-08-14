@@ -135,9 +135,9 @@
           <aside class="speaker-note">这页是全篇结构的中轴。前面讲为什么难，后面用三个真实闭环把难度落到工作现场。产品执行闭环保证能安全完成动作，UI 生产闭环保证人能理解和使用，数据学习闭环保证上线之后继续产生证据。三个环缺一个，产品就停在演示、工具或一次性项目。<strong>[Sources]</strong> 产品文档/01-产品概览/Menu-Copilot-产品总览.md；产品文档/03-架构设计/Menu-Copilot-系统架构.md；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md。</aside>
         </section>
 
-        <section class="slide slide-product-loop paper" id="slide-9" data-title="产品闭环：AI 生成候选，系统保证安全生效" aria-hidden="true">
-          <div class="kicker">闭环 01 · Product execution</div>
-          <h2>AI 生成候选，<br>产品必须保证它<em>安全生效。</em></h2>
+        <section class="slide slide-product-loop paper" id="slide-9" data-title="我们做的不是 Demo，而是涉及支付的对外产品" aria-hidden="true">
+          <div class="kicker">闭环 01 · External product bar</div>
+          <h2>我们做的不是 Demo。对外产品一旦涉及支付，<br>必须做到<em>安全、稳定、可靠。</em></h2>
           <div class="product-shots" aria-label="Menu Copilot 诊断与机会页面">
             <figure><img src="../assets/feature-diagnosis.webp" alt="Menu Copilot 菜单诊断页面"><figcaption>真实诊断</figcaption></figure>
             <figure><img src="../assets/feature-opportunities.webp" alt="Menu Copilot 优化机会页面"><figcaption>优化机会</figcaption></figure>
@@ -149,50 +149,54 @@
             <div class="product-human"><b>04</b><strong>商家确认</strong><span>逐字段放行</span></div><i>→</i>
             <div class="product-release"><b>05</b><strong>Apply + 回读</strong><span>审计、重试、回滚</span></div>
           </div>
-          <div class="product-safety"><strong>生成完成 ≠ 产品完成</strong><span>授权</span><span>幂等</span><span>重试</span><span>审计</span><span>回读</span><span>回滚</span></div>
+          <div class="product-levels" aria-label="Demo、内部产品和对外产品的技术门槛对比">
+            <div><b>DEMO</b><strong>主流程跑通</strong><span>允许 Mock 与人工修复</span></div>
+            <div><b>内部产品</b><strong>受控用户可用</strong><span>已知权限 · 团队可兜底</span></div>
+            <div class="external-level"><b>对外产品 · 支付</b><strong>安全 · 稳定 · 可靠</strong><span>授权 · 幂等 · 重试 · 核对 · 审计 · 补偿</span></div>
+          </div>
           <div class="footer">OPC · AI-native 产品实践</div><div class="folio">09</div>
-          <aside class="speaker-note">这是第一种难：模型输出只是候选，不能直接写线上。真实产品还要处理数据授权、权限、幂等、失败重试、人工确认、发布后回读、逐项审计和回滚。产品本身已经是 Agent—Human—Agent：Agent 生成，人承担事实与风险，系统确定性执行。<strong>[Sources]</strong> 产品文档/03-架构设计/Menu-Copilot-系统架构.md；wiki/产品/AI菜单优化Agent与ChangeSet架构.md；产品文档/02-功能规范/Menu-Copilot-发布与版本治理.md；用户提供的 Menu Copilot 页面截图。</aside>
+          <aside class="speaker-note">Demo 的成功标准可以只是主流程跑通一次；内部产品面对受控用户，很多异常仍可由团队人工兜底；但我们做的是面向真实用户的对外产品，一旦涉及支付，错误会直接影响用户资金与信任，技术底线必须提高到安全、稳定和可靠。模型输出只是候选，线上系统还要处理授权、支付幂等、失败重试、状态核对、审计与异常补偿。产品本身因此采用 Agent—Human—Agent：Agent 生成，人承担事实与风险，系统确定性执行。<strong>[Sources]</strong> 用户补充的对外产品与支付要求；产品文档/03-架构设计/Menu-Copilot-系统架构.md；wiki/产品/AI菜单优化Agent与ChangeSet架构.md；产品文档/02-功能规范/Menu-Copilot-发布与版本治理.md；用户提供的 Menu Copilot 页面截图。</aside>
         </section>
 
-        <section class="slide slide-ui-collab paper" id="slide-10" data-title="UI 闭环：AI 发散，人守住真实体验" aria-hidden="true">
-          <div class="kicker">闭环 02 · UI production</div>
-          <h2>AI 能快速生成十个方案，<br>但不能替我们判断<em>哪一个值得上线。</em></h2>
-          <div class="ui-story" aria-label="从描述需求、AI 批量生成，到人工比较调整和真实页面的 UI 协作过程">
+        <section class="slide slide-ui-collab paper" id="slide-10" data-title="AI 可以围绕同一假设，生成多个可验证版本" aria-hidden="true">
+          <div class="kicker">闭环 02 · Multi-variant generation</div>
+          <h2>AI 不只把第一版做快，<br>还能围绕同一假设生成<em>多个可验证版本。</em></h2>
+          <div class="ui-story" aria-label="从定义假设、AI 批量生成受控版本，到人工建立实验并进入真实产品的过程">
             <figure class="ui-step ui-step-one">
-              <div class="ui-prompt"><b>01</b><strong>先定义目标</strong><p>用户是谁、这一屏解决什么、信息层级与气质怎样。</p></div>
+              <div class="ui-prompt"><b>01</b><strong>先定义假设</strong><p>改变什么变量、期待什么行为、用什么指标判断。</p></div>
               <div class="ui-shot"><img src="../assets/ui-iteration-canvas.png" alt="Figma 画布中由 AI 快速生成的大量菜单产品界面方案"></div>
-              <figcaption><strong>AI 负责铺开可能性</strong><span>从描述到骨架，快速形成可以比较的方向</span></figcaption>
+              <figcaption><strong>AI 批量生成 Variant</strong><span>同一目标下，快速形成结构、文案或视觉的多个版本</span></figcaption>
             </figure><i class="ui-arrow" aria-hidden="true">→</i>
             <figure class="ui-step ui-step-two">
               <div class="ui-shot"><img src="../assets/ui-landing-iterations.png" alt="Figma 画布中对落地页结构、内容和视觉进行多轮比较调整"></div>
-              <figcaption><b>02</b><strong>人在画布里收敛</strong><span>比较、删改和重组比例、层级、留白与交互</span></figcaption>
+              <figcaption><b>02</b><strong>人控制实验变量</strong><span>每轮只改变关键变量，保持版本差异可以解释</span></figcaption>
             </figure><i class="ui-arrow" aria-hidden="true">→</i>
             <figure class="ui-step ui-step-three">
               <div class="ui-shot"><img src="../assets/aprim-homepage.png" alt="经过多轮人机协作收敛后的 Aprim 产品首页"></div>
-              <figcaption><b>03</b><strong>守门后进入产品</strong><span>品牌一致、信息清楚、真正可用，才成为最终方案</span></figcaption>
+              <figcaption><b>03</b><strong>守门后进入真实验证</strong><span>质量达标、埋点完整，多个版本才允许面对用户</span></figcaption>
             </figure>
           </div>
-          <div class="ui-thesis"><span><b>AI 擅长</b><strong>发散 · 骨架 · 第一版</strong></span><span><b>人来守门</b><strong>比例 · 层级 · 交互 · 品牌</strong></span></div>
+          <div class="variant-thesis"><span><b>AI 生成</b><strong>Variant A / B / C</strong></span><span><b>人定义</b><strong>假设 · 变量 · 成功标准</strong></span><span><b>数据决定</b><strong>保留 · 迭代 · 淘汰</strong></span></div>
           <div class="footer">OPC · AI-native 产品实践</div><div class="folio">10</div>
-          <aside class="speaker-note">第二种难不是把界面画出来，而是判断。AI 能把描述快速变成很多第一版，但比例、层级、留白、交互细节与品牌一致性仍然不稳定。人的价值是带着产品目标比较、删改和重组，并把最终判断沉淀为设计 token、组件和状态规则，交给开发 Agent 继续接力。<strong>[Sources]</strong> 用户提供的两张 Figma 过程截图与 Aprim 产品首页截图。</aside>
+          <aside class="speaker-note">AI 的价值不只是一版做得快，而是让验证成本显著下降：围绕同一个产品假设，可以批量生成结构、文案或视觉上的 Variant A、B、C。关键不是随机多画几版，而是由人先定义假设、控制单一变量、设定成功指标，再让质量合格并带有完整埋点的版本进入真实验证。这样 AI 扩大探索空间，人保证实验仍然可以解释。<strong>[Sources]</strong> 用户补充的多版本验证方式；用户提供的两张 Figma 过程截图与 Aprim 产品首页截图。</aside>
         </section>
 
-        <section class="slide slide-insight paper" id="slide-11" data-title="数据闭环：上线后，才开始回答有没有价值" aria-hidden="true">
-          <div class="kicker">闭环 03 · Data learning</div>
-          <h2>产品上线只回答“能不能用”，<br>埋点才开始回答<em>“有没有价值”。</em></h2>
+        <section class="slide slide-insight paper" id="slide-11" data-title="埋点和 Eval 判断哪个版本真正有效" aria-hidden="true">
+          <div class="kicker">闭环 03 · Variant validation</div>
+          <h2>多版本不是为了多做选择，<br>埋点和 Eval 要回答<em>“哪一个真正有效”。</em></h2>
           <figure class="posthog-proof">
             <img src="../assets/posthog-acquisition-content.png" alt="Aprim Landing 在 PostHog 中的 Acquisition & Content 看板">
             <figcaption><b>真实看板</b><span>CTA 点击 · 内容区块到达 · 时间趋势</span></figcaption>
           </figure>
-          <div class="insight-loop compact" aria-label="从埋点到新需求再到实验的数据闭环">
-            <div><b>01</b><strong>埋点回流</strong><span>访问、区块、CTA<br>以及产品关键动作</span></div><i>↓</i>
-            <div><b>02</b><strong>AI 分析</strong><span>漏斗、流失、分群<br>异常与内容偏好</span></div><i>↓</i>
-            <div><b>03</b><strong>需求候选</strong><span>问题、证据、方案<br>成功标准与优先级</span></div><i>↓</i>
-            <div class="human-check"><b>04</b><strong>人审后实验</strong><span>确认样本、价值与风险<br>实现、发布、再观察</span></div>
+          <div class="insight-loop compact" aria-label="从版本分配、行为回流、AI 分析到人工决策的验证闭环">
+            <div><b>01</b><strong>分配 Variant</strong><span>版本 ID、用户分群<br>假设与成功标准</span></div><i>↓</i>
+            <div><b>02</b><strong>行为回流</strong><span>访问、CTA、关键动作<br>转化与异常</span></div><i>↓</i>
+            <div><b>03</b><strong>AI 分析差异</strong><span>漏斗、流失、分群<br>效果与置信风险</span></div><i>↓</i>
+            <div class="human-check"><b>04</b><strong>人审后决策</strong><span>保留、迭代或淘汰<br>结果写回下一轮</span></div>
           </div>
-          <p class="insight-thesis">AI 可以主动发现问题并提出需求；是否立项，仍由人结合样本质量、业务价值和风险判断。</p>
+          <p class="insight-thesis">一次只验证一个关键变量；否则版本越多，数据越难解释，AI 只是在批量制造噪音。</p>
           <div class="footer">OPC · AI-native 产品实践</div><div class="folio">11</div>
-          <aside class="speaker-note">第三种难是把上线变成学习。埋点不仅统计访问量，还要和产品问题、成功标准以及下一轮实验相连。AI 可以读取漏斗、流失、分群和内容偏好，形成带证据的需求候选；人仍要判断样本是否可信、需求是否值得做、有没有错误归因。<strong>[Sources]</strong> 用户提供的 Aprim Landing PostHog Acquisition & Content 看板截图；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md；raw/codex/2026-08-06/AI菜单/Aprim-PostHog埋点与隐私策略.md。</aside>
+          <aside class="speaker-note">多个版本只有和实验协议、埋点与 Eval 连起来才有价值。每个 Variant 需要清楚的版本 ID、用户分群、唯一关键变量和成功标准；PostHog 回流行为，AI 分析漏斗、流失、分群与异常，人再结合样本质量、业务价值和风险决定保留、迭代或淘汰。版本越多不代表验证越好，如果同时改变太多变量，结果就无法解释。<strong>[Sources]</strong> 用户补充的多版本验证方式；用户提供的 Aprim Landing PostHog Acquisition & Content 看板截图；产品文档/02-功能规范/Menu-Copilot-数据指标与实验.md；raw/codex/2026-08-06/AI菜单/Aprim-PostHog埋点与隐私策略.md。</aside>
         </section>
 
         <section class="slide slide-bridge ink" id="slide-12" data-title="V3 不是取消分工，而是消灭边界上的等待" aria-hidden="true">
