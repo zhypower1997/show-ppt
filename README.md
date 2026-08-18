@@ -7,6 +7,7 @@
 - `/`：演示稿导航首页
 - `/menu-copilot/`：原始 20 页版本——Menu Copilot 从 0→1 与三人团队 AI-native 协作
 - `/phase-iii/`：18 页体系版——六层难度、三个真实闭环，以及 Phase III 的组织接力
+- `/growth-pilot/`：17 页增长方案——邮件、短视频、WhatsApp 与产品内推荐裂变
 
 ## 新增讲解稿
 

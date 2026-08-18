@@ -16,6 +16,14 @@
       "slides": 18,
       "status": "ready",
       "featured": true
+    },
+    {
+      "slug": "growth-pilot",
+      "path": "/growth-pilot/",
+      "title": "巴西餐饮商家全渠道营销方案",
+      "summary": "邮件获客、AI 短视频、WhatsApp 转化与产品内推荐裂变的 30 天增长试验",
+      "slides": 17,
+      "status": "published"
     }
   ]
 }
